@@ -40,9 +40,10 @@ pytest tests/test_main_page.py --alluredir=allure-results -v
 ### Запуск тестов с метками
 pytest tests/ -m "critical" --alluredir=allure-results
 
-### Параллельный запуск (4 потока)
-pytest tests/ -n 4 --alluredir=allure-results
-
 ### Генерация и открытие Allure отчета
 allure generate allure-results -o allure-report --clean
 allure open allure-report
+
+
+Проект поддерживает три режима запуска через маркеры (pytest -m "ui", pytest -m "api", pytest)
+Ссылка на финальный проект по ручному тестированию https://zaytsevamn-qa121-2.yonote.ru/share/e1b1d744-210e-4d35-b234-ffb07af068aa
