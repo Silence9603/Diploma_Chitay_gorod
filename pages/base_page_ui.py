@@ -1,6 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
 import allure
 
 
@@ -43,5 +44,5 @@ class BasePage:
         try:
             self.find_element(locator)
             return True
-        except:
+        except NoSuchElementException:
             return False
